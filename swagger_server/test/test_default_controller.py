@@ -16,11 +16,9 @@ class TestDefaultController(BaseTestCase):
 
         Log-in Step 2 (Tokens) - Give valid authorization code. Return access token if code is valid.
         """
-        query_string = [('authorization_code', None)]
         response = self.client.open(
             '/deti-egs-moviefan/Authentication/1.0.0/v1/access-token',
-            method='POST',
-            query_string=query_string)
+            method='POST')
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))
 

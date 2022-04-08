@@ -1,21 +1,10 @@
-import connexion
-import six
-
-from swagger_server import util
-
-
-def v1_access_token_post(authorization_code):  # noqa: E501
+def v1_access_token_post():  # noqa: E501
     """Log-in Step 2 (Tokens) - Give valid authorization code. Return access token if code is valid.
 
     Authorization code is obtained through a log-in process with &#39;/auth-token&#39;. # noqa: E501
 
-    :param authorization_code: The authorization code returned by the &#39;/v1/auth-token&#39;
-    :type authorization_code: dict | bytes
-
     :rtype: None
     """
-    if connexion.request.is_json:
-        authorization_code = .from_dict(connexion.request.get_json())  # noqa: E501
     return 'do some magic!'
 
 

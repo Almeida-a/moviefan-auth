@@ -68,11 +68,7 @@ paths:
         \ token if code is valid."
       description: "Authorization code is obtained through a log-in process with '/auth-token'."
       operationId: "v1_access_token_post"
-      parameters:
-      - name: "authorization_code"
-        in: "query"
-        description: "The authorization code returned by the '/v1/auth-token'"
-        required: true
+      parameters: []
       responses:
         "202":
           description: "Request accepted - return access token."
